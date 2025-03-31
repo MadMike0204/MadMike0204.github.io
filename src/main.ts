@@ -1,8 +1,8 @@
 import {createApp} from "vue";
 import {createPinia} from "pinia"; // 状态管理
 import ElementPlus from "element-plus"; // 组件库
-import {zhCn} from "element-plus/es/locale"; // 国际化中文
-import {router} from "./router.ts"; // 路由管理
+import zhCn from 'element-plus/es/locale/lang/zh-cn'; // 国际化中文
+import {router} from "./router"; // 路由管理
 import './styles/style.css' // 样式
 import App from './App.vue'
 // 先创建app和pinia实例

@@ -1,7 +1,7 @@
-  import {createWebHistory, createRouter} from "vue-router";
-import Posts from "./pages/Posts.vue";
-import App from "./App.vue";
-import Home from "./pages/Home.vue";
+import {createWebHistory, createRouter} from "vue-router";
+import Posts from "../pages/Posts.vue";
+import App from "../App.vue";
+import Home from "../pages/Home.vue";
 
 const routes = [
     {path: '/', component: App},
