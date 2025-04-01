@@ -5,6 +5,7 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'; // 国际化中文
 import {router} from "./router"; // 路由管理
 import './styles/style.css' // 样式
 import App from './App.vue'
+
 // 先创建app和pinia实例
 const app = createApp(App);
 const pinia = createPinia();
