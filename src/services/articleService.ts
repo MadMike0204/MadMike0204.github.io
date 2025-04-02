@@ -3,11 +3,13 @@ import type {Articles, ArticleInfo} from "../types/article.ts";
 import {marked} from 'marked'; // 解析markdown文件
 import matter from "gray-matter"; // 解析md的front matter
 
+
 // 使用 vite 提供的api:import.meta.glob 用于动态地导入多个文件
 // 键:文件路径
 // 值:?
 // eager: vite立即加载所有文件，而不是懒加载
-const markdownModules = import.meta.glob('@/assets/articles/*.md', {
+
+const markdownModules = import.meta.glob('./assets/articles/*.md', {
     eager: true,
 });
 // 声明Articles
@@ -31,7 +33,8 @@ for (const path in markdownModules) {
         htmlContent = `<p>Error parsing markdown content.</p>`
     }
     // 设置标题与id
-    if (frontmatter.headline && frontmatter.id) {
+    if(1){
+    //if (frontmatter.headline && frontmatter.id) {
         const article: ArticleInfo = {
             id: frontmatter.id,
             headline: frontmatter.id,
