@@ -1,17 +1,50 @@
 <script setup lang="ts">
-  import {type Articles,type ArticleInfo} from "../types/article.ts";
-  import {reactive} from "vue";
+import {reactive} from "vue";
 
-  const articles = reactive<Articles>([]);
-
+const postList = reactive([
+  {
+    id: "dfghji001",
+    headline: "HEADLINEEEE",
+    content: "This is a test post.",
+  },
+  {
+    id: "dfghji002",
+    headline: "HEADLINEEEEE",
+    content: "This is a second test post.",
+  },
+  {
+    id: "dfghji003",
+    headline: "HEADLINEEEEEE",
+    content: "This is a third test post.",
+  },
+])
 </script>
 
 <template>
   <div class="posts-info">
-    <h3>Post No.1</h3>
-    <h3>Post No.2</h3>
-    <h3>Post No.3</h3>
-    <h3>Post No.4</h3>
+    <ul>
+      <li v-for="post in postList" :key="post.id">
+        <RouterLink
+            :to="{
+              name:'neirong',
+              // query:{
+              //   id:post.id,
+              //   headline:post.headline,
+              //   content:post.content,
+              // },
+              params:{
+                id:post.id,
+                headline:post.headline,
+                content:post.content,
+              }
+            }">
+          {{ post.headline }}
+        </RouterLink>
+      </li>
+    </ul>
+  </div>
+  <div class="posts-detail">
+    <RouterView></RouterView>
   </div>
 </template>
 

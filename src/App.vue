@@ -5,12 +5,12 @@
     </div>
     <!--导航区-->
     <div class="navigate">
-      <RouterLink to="/home">
+      <RouterLink :to="{path:'/home'}">
         <el-button type="primary" size="default">
           to Home
         </el-button>
       </RouterLink>
-      <RouterLink to="/posts">
+      <RouterLink :to="{path:'/posts'}">
         <el-button type="primary" size="default">
           to Posts
         </el-button>

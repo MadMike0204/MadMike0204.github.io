@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "idiot",
+      "age": 233,
+      "addr": "A city"
+    },
+    {
+      "id": 2,
+      "name": "idiot 22",
+      "age": 21,
+      "addr": "B city"
+    }
+  ]
+}
