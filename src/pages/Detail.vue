@@ -1,15 +1,13 @@
 <script setup lang="ts">
-  import {useRoute} from "vue-router";
-  const route = useRoute();
-  console.log(route.params);
+  defineProps(["id","headline","content"]);
 </script>
 
 <template>
   <div>
     <ul class="posts-list">
-      <li>编号</li>
-      <li>标题</li>
-      <li>内容</li>
+      <li>编号:{{id}}</li>
+      <li>标题:{{headline}}</li>
+      <li>内容:{{content}}</li>
     </ul>
   </div>
 

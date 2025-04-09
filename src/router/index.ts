@@ -1,4 +1,4 @@
-import {createWebHistory, createRouter} from "vue-router";
+import {createWebHistory, createRouter,type RouteLocationNormalized} from "vue-router";
 import Detail from "../pages/Detail.vue";
 import Posts from "../pages/Posts.vue";
 import Home from "../pages/Home.vue";
@@ -12,9 +12,12 @@ const routes = [
         component: Posts,
         children: [
             {
-                path:'detail',
+                path:'detail/:id/:headline/:content',
                 name:'neirong',
                 component:Detail,
+                props(route:RouteLocationNormalized){
+                    return route.params;
+                }
             }
         ]
     },
