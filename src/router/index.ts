@@ -3,7 +3,7 @@ import Detail from "../pages/Detail.vue";
 import Posts from "../pages/Posts.vue";
 import Home from "../pages/Home.vue";
 import Search from "../pages/Search.vue";
-
+import Counter from "../pages/Counter.vue";
 
 const routes = [
     {path: '/', redirect: '/home'},// 重定向
@@ -15,7 +15,7 @@ const routes = [
                 path:'detail/:id/:headline/:content',
                 name:'neirong',
                 component:Detail,
-                props(route:RouteLocationNormalized){
+                props(route:RouteLocationNormalized){ // ?
                     return route.params;
                 }
             }
@@ -23,6 +23,7 @@ const routes = [
     },
     {path: '/home', component: Home},
     {path: "/search", component: Search},
+    {path:'/counter',component: Counter},
 ];
 export const router = createRouter({
     history: createWebHistory(),

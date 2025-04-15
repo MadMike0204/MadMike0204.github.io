@@ -15,6 +15,11 @@
           to Posts
         </el-button>
       </RouterLink>
+      <RouterLink :to="{path:'/counter'}">
+        <el-button type="primary" size="default">
+          to Counter
+        </el-button>
+      </RouterLink>
     </div>
     <!--展示区-->
     <div class="content">

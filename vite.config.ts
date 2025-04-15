@@ -15,4 +15,14 @@ export default defineConfig({
         resolvers:[ElementPlusResolver()],
       }),
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.uomg.com',
+        changeOrigin: true,
+        secure: false,
+        followRedirects: true
+      }
+    }
+  }
 })
