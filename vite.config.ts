@@ -17,11 +17,10 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api': {
+      '/uomg': {
         target: 'https://api.uomg.com',
-        changeOrigin: true,
-        secure: false,
-        followRedirects: true
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/uomg/, '')
       }
     }
   }
