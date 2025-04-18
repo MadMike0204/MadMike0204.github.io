@@ -4,6 +4,7 @@ import Posts from "../pages/Posts.vue";
 import Home from "../pages/Home.vue";
 import Search from "../pages/Search.vue";
 import Counter from "../pages/Counter.vue";
+import Login from "../pages/Login.vue";
 
 const routes = [
     {path: '/', redirect: '/home'},// 重定向
@@ -24,6 +25,7 @@ const routes = [
     {path: '/home', component: Home},
     {path: "/search", component: Search},
     {path:'/counter',component: Counter},
+    {path:'/login',component: Login},
 ];
 export const router = createRouter({
     history: createWebHistory(),

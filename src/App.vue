@@ -1,10 +1,6 @@
 <template>
   <div class="app">
-    <div class="loginState">
-      <p>登录状态:{{getLoginState}} </p>
-      <button @click="loginFunc"></button>
-      <p></p>
-    </div>
+    <Login></Login>
     <div class="head">
       <h2>MadMike的小站</h2>
     </div>
@@ -34,16 +30,8 @@
 </template>
 
 <script lang="ts" setup name="App">
-import {useLoginStore} from "./stores/login.ts";
-import {storeToRefs} from "pinia";
-import {computed} from "vue";
 
-  let loginStore = useLoginStore();
-  let{loginState,loginFunc,exitFunc,loginUserName} = storeToRefs(loginStore);
-
-  const getLoginState = computed(()=>{
-    return loginState?("用户 "+loginUserName.value+" 已登录"):"未登录";
-  })
+import Login from "./pages/Login.vue";
 </script>
 <style scoped>
 .head {
