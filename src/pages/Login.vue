@@ -25,8 +25,7 @@
       <button v-on:click="loginStore.loginFunc(userName)">LoginFunction</button>
       <p></p>
     </div>
-  </template>
+</template>
+<style scoped>
 
-  <style scoped>
-
-  </style>
+</style>

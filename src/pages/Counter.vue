@@ -15,6 +15,11 @@
   // 这种方式只会把store中的state包成响应式对象返回
   let {talkList,curTalkIndex} = storeToRefs(talkStore);
 
+  talkStore.$subscribe((mutate,state)=>{
+    console.log(":::::",mutate,state);
+    localStorage.setItem('talkList',JSON.stringify(state.talkList));
+  })
+
   function editCounterStore1() {
     counterStore.$patch({
      // editTime:0,

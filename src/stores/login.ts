@@ -15,11 +15,10 @@ export const useLoginStore = defineStore('login', () => {
         loginState.value = false;
     }
 
-    let info = JSON.parse(localStorage.getItem("talkList") as string) || [];
+    // let info = JSON.parse(localStorage.getItem("talkList") as string) || [];
     return {
         loginUserName,
         loginState,
-        info,
         exitFunc,
         loginFunc,
     }

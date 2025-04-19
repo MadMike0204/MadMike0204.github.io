@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+
     <Login></Login>
     <div class="head">
       <h2>MadMike的小站</h2>
@@ -19,6 +20,11 @@
       <RouterLink :to="{path:'/counter'}">
         <el-button type="primary" size="default">
           to Counter
+        </el-button>
+      </RouterLink>
+      <RouterLink :to="{path:'/father-child'}">
+        <el-button type="primary" size="default">
+          to Father-Child Experiment
         </el-button>
       </RouterLink>
     </div>
