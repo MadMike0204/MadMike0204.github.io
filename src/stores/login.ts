@@ -18,7 +18,7 @@ export const useLoginStore = defineStore('login', () => {
     // let info = JSON.parse(localStorage.getItem("talkList") as string) || [];
     return {
         loginUserName,
-        loginState,
+        loginState,w
         exitFunc,
         loginFunc,
     }
